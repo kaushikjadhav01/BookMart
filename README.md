@@ -17,7 +17,6 @@
 
 # BookMart: Online Book Shopping System
 Online Book Shopping System class project using Ruby on Rails, live at: http://bookmart.kajadhav.me
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -29,6 +28,13 @@ Online Book Shopping System class project using Ruby on Rails, live at: http://b
     <li><a href="#links">Links</a></li>
   </ol>
 </details>
+<p align="center">
+    <a href="https://github.com/kaushikjadhav01/BookMart">View Demo</a>
+    ·
+    <a href="https://github.com/kaushikjadhav01/BookMart/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/kaushikjadhav01/BookMart/issues">Request Feature</a>
+</p>
 
 ## System Description and Functions
 **Live Demo:** http://bookmart.kajadhav.me<br/>
@@ -90,9 +96,7 @@ Users can:<br/>
 4. Run ```sudo docker run --rm -it -v app-storage:/rails/storage -p 3000:3000 --name app -d app```
 
 ## Testing
-1. After running local setup steps, run ```rspec --format doc``` to run tests for the model and controller
-
-The test files run for RSpec are ```spec/controllers/reviews_controller_spec.rb``` and ```spec/models/book_spec.rb```
+After running local setup steps, run ```rspec --format doc``` to run tests for the model and controller. The test files run for RSpec are ```spec/controllers/reviews_controller_spec.rb``` and ```spec/models/book_spec.rb```
 
 ## Authors
 ### Kaushik Jadhav
