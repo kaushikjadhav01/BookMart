@@ -1,0 +1,16 @@
+<div id="<%= dom_id user %>">
+  <tr>
+      <th scope="row"><%= user.id %></th>
+      <td><%= user.username %></td>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.address %></td>
+      <td><%= user.credit_card_number %></td>
+      <td><%= user.phone_number %></td>
+      <td><%= link_to "Edit", edit_user_path(user) %> | 
+          <%= link_to 'Destroy', user, data: { turbo_method: :delete } %> | 
+          <%= link_to "Show", user %>
+      </td>
+    </tr>
+
+</div>

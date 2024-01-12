@@ -1,0 +1,77 @@
+<!--section start-->
+<section class="login-page section-big-py-space b-g-light">
+    <div class="custom-container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-4">
+                <div class="theme-card">
+                    <% if edit %>
+                    <h3 class="text-center">Edit User</h3>
+                    <%else%>
+                    <h3 class="text-center">Create New User</h3>
+                    <%end%>
+                    
+                    <%= form_tag (edit ? users_update_path(:id => user.id) : users_create_path) do |f| %>
+                      <% if user.errors.any? %>
+                        <div style="color: red">
+                          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+                          <ul>
+                            <% user.errors.each do |error| %>
+                              <li><%= error.full_message %></li>
+                            <% end %>
+                          </ul>
+                        </div>
+                      <% end %>
+
+                      <div class="col-md-12 form-group">
+                        <%= label_tag :username %><br />
+                        <%= text_field_tag :username, (edit ? user.username : ""), class: 'form-control' %>
+                      </div>
+
+                      <div class="col-md-12 form-group">
+                        <%= label_tag :email %><br />
+                        <%= email_field_tag :email, (edit ? user.email : ""), class: 'form-control' %>
+                      </div>
+
+                      <div class="col-md-12 form-group">
+                        <%= label_tag :password %>
+                        <% if @minimum_password_length %>
+                        <em>(<%= @minimum_password_length %> characters minimum)</em>
+                        <% end %><br />
+                        <%= password_field_tag :password, "", class: 'form-control' %>
+                      </div>
+
+                      <div class="col-md-12 form-group">
+                        <%= label_tag :password_confirmation %><br />
+                        <%= password_field_tag :password_confirmation, "", class: 'form-control' %>
+                      </div>
+
+                      <div class="col-md-12 form-group">
+                        <%= label_tag :name %>
+                        <%= text_field_tag :name, (edit ? user.name : ""), class: 'form-control' %>
+                      </div>
+
+                      <div class="col-md-12 form-group">
+                        <%= label_tag :address %>
+                        <%= text_field_tag :address, (edit ? user.address : ""), class: 'form-control' %>
+                      </div>
+
+                      <div class="col-md-12 form-group">
+                        <%= label_tag :credit_card_number %>
+                        <%= text_field_tag :credit_card_number, (edit ? user.credit_card_number : ""), class: 'form-control' %>
+                      </div>
+
+                      <div class="col-md-12 form-group">
+                        <%= label_tag :phone_number %>
+                        <%= text_field_tag :phone_number, (edit ? user.phone_number : ""), class: 'form-control' %>
+                      </div>
+                      
+                      <%= submit_tag "Submit", class: 'btn btn-normal' %>
+                      <%= link_to "Back to Users", users_path, class: "txt-default", style: 'padding-left: 140px;' %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Section ends-->

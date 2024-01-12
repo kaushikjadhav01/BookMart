@@ -1,0 +1,9 @@
+<h1>New review for <%= @book.name %> by <%= current_user.name %></h1>
+
+<%= render "form", review: @review %>
+
+<br>
+
+<div>
+  <%= link_to "Back to reviews", reviews_path(book_id: @book.id) %>
+</div>

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<div class="mt-3" style="padding-left: 20px;">
+<div>
+  <%= image_tag(@book.image, width: '300') %>
+</div>
+<p>
+  <h3><%= @book.name %></h3>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @book.publisher %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @book.price %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @book.stock %>
+</p>
+
+<p>
+  <strong>Average Rating:</strong>
+  <%= @book.average_rating %>
+</p>
+
+<%= link_to "Show reviews for #{@book.name}", reviews_path(book_id: @book.id) %> |
+<% if @book_purchased || current_user.is_admin? %>
+  <%= link_to "Add New Review for #{@book.name}", new_review_path(book_id: @book.id) %> | 
+<%end%>
+<%= link_to 'Back', shops_path %>
+</div>

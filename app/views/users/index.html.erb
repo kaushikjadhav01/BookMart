@@ -1,0 +1,37 @@
+<section class="contact-page register-page b-g-light">
+<div class="custom-container">
+<div class="row">
+    <div class="col-lg-10">
+      <h3 class="mb-3" style="padding-top:15px;">USERS</h3>
+    </div>
+    <div class="col">
+      <%= link_to "New user", new_user_path, class: 'btn btn-solid btn-sm mt-3 mb-3' %>
+    </div>
+</div>
+</div>
+</section>
+
+<div id="users">
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Credit Card Number</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @users.each do |user| %>
+      <% unless user.is_admin %>
+        <%= render user %>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+  
+</div>

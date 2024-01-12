@@ -1,0 +1,107 @@
+<!-- personal deatail section start -->
+<section class="contact-page register-page section-big-py-space b-g-light">
+    <div class="custom-container">
+        <div class="row">
+            <div class="col">
+                <h3 class="mb-3">PERSONAL DETAILS</h3>
+                 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }, html: { method: :put }, class:"theme-form") do |f| %>
+                  <%= render "devise/shared/error_messages", resource: resource %>
+                    <div class="row">
+                        <% unless @user.is_admin? %>
+                          <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :username %><br />
+                            <%= f.text_field :username, class: 'form-control'  %>
+                          </div>
+                          </div>
+
+                          <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+                            <%= f.password_field :password, autocomplete: "off", class: 'form-control'  %>
+                          </div>
+                          </div>
+
+                          <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :password_confirmation %><br />
+                            <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'  %>
+                          </div>
+                          </div>
+                        <% else %>
+                          <div class="col-md-4">
+                          <div class="form-group">
+                            <%= f.label :username %><br />
+                            <%= @user.username %>
+                          </div>
+                          </div>
+                        <% end %>
+
+                        <div class="col-md-4">
+                        <div class="form-group">
+                          <%= f.label :name %><br />
+                          <%= f.text_field :name, class: 'form-control'  %>
+                        </div>
+                        </div>
+
+                        <div class="col-md-4">
+                        <div class="form-group">
+                          <%= f.label :email %><br />
+                          <%= f.email_field :email, class: 'form-control'  %>
+                        </div>
+                        </div>
+
+                        <div class="col-md-4">
+                        <div class="form-group">
+                          <%= f.label :address %><br />
+                          <%= f.text_field :address, class: 'form-control'  %>
+                        </div>
+                        </div>
+
+                        <div class="col-md-4">
+                        <div class="form-group">
+                          <%= f.label :credit_card_number %><br />
+                          <%= f.text_field :credit_card_number, class: 'form-control'  %>
+                        </div>
+                        </div>
+
+                        <div class="col-md-4">
+                        <div class="form-group">
+                          <%= f.label :phone_number %><br />
+                          <%= f.text_field :phone_number, class: 'form-control'  %>
+                        </div>
+                        </div>
+
+                        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                        <% end %>
+
+                        <div class="col-md-4">
+                        <div class="form-group">
+                          <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+                          <%= f.password_field :current_password, autocomplete: "off", class: 'form-control'  %>
+                        </div>
+                        </div>
+
+                        <div class="col-md-12">                        
+                          <%= f.submit "Update", class: 'btn btn-sm btn-normal mb-lg-5' %>
+                        </div>
+
+                    </div>
+                <%end%>
+            </div>
+        </div>
+
+        <% unless @user.is_admin? %>
+          <div class="row">
+              <div class="col">
+                  <h3 class="mb-3">CANCEL MY ACCOUNT</h3>
+              </div>
+          </div>
+
+        <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), class: "btn btn-danger", data: { confirm: "Are you sure? You cannot undo this." }, method: :delete %></p>
+        <% end %>
+      
+    </div>
+</section>
+<!-- Section ends -->

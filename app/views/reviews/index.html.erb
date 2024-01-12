@@ -1,0 +1,40 @@
+<section class="contact-page register-page b-g-light">
+<div class="custom-container">
+<div class="row">
+    <div class="col">
+      <h3 class="mb-3" style="padding-top:15px;">REVIEWS</h3>
+      <% if @book %>
+        <%= link_to "Back to #{@book.name}", shop_path(@book) %>
+      <% end %>
+    </div>
+</div>
+</div>
+</section>
+
+<%= form_tag "/reviews", method: "GET" do %>
+  <p>Search by user or book title</p>
+  <%= text_field_tag :search, params[:search] %>
+
+  <%= submit_tag "Search" %>
+
+<% end %>
+
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">User</th>
+      <th scope="col">Book</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Review</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <div id="reviews">
+      <% @reviews.each do |review| %>
+        <%= render review %>
+      <% end %>
+    </div>
+  </tbody>
+</table>

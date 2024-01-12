@@ -1,0 +1,23 @@
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Publisher</th>
+        <th scope="col">Price</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Average Rating</th>
+        <th scope="col">Show book</th>
+      </tr>
+    </thead>
+    <tbody>  
+      <%= render @book %>
+    </tbody>
+  </table>
+
+<div>
+  <%= link_to "Edit this book", edit_book_path(@book) %> |
+  <%= link_to "Back to books", books_path %> | 
+  <%= link_to 'Destroy this book', @book, data: { turbo_method: :delete } %>
+</div>

@@ -1,0 +1,22 @@
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">User</th>
+      <th scope="col">Book</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Review</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @review %>
+  </tbody>
+</table>
+<div>
+  <% if @review.user.id == current_user.id || current_user.is_admin %>
+  <%= link_to "Edit this review", edit_review_path(@review) %> |
+  <%= link_to 'Destroy this user', @review, data: { turbo_method: :delete } %> |
+  <% end %>
+  <%= link_to "Back to reviews", reviews_path(book_id: @review.book.id) %>
+</div>

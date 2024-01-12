@@ -1,0 +1,14 @@
+<div id="<%= dom_id transaction %>">
+    <tr>
+      <th scope="row"><%= index.to_i + 1%></th>
+      <td><%= @user.username %></td>
+      <td><%= @user.name %></td>
+      <td><%= @user.email %></td>
+      <td><%= transaction.address %></td>
+      <td><%= transaction.credit_card_number %></td>
+      <td><%= transaction.phone_number %></td>
+      <td><%= transaction.quantity %></td>
+      <td><%= transaction.purchased_books %></td>
+      <td><%= transaction.total_price %></td>
+    </tr>
+</div>

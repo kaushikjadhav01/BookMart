@@ -1,0 +1,33 @@
+<section class="contact-page register-page b-g-light">
+<div class="custom-container">
+<div class="row">
+    <div class="col">
+      <h3 class="mb-3" style="padding-top:15px;">TRANSACTION HISTORY</h3>
+    </div>
+</div>
+</div>
+</section>
+
+<div id="transactions">
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Credit Card Number</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Number of Items</th>
+      <th scope="col">Books</th>
+      <th scope="col">Total Price</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @transactions.each_with_index do |transaction, index| %>
+        <%= render transaction, index: index %>
+      <% end %>
+  </tbody>
+</table>
+</div>

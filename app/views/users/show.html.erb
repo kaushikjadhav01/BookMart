@@ -1,0 +1,23 @@
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Credit Card Number</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Show User</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @user %>
+  </tbody>
+</table>
+
+<div>
+  <%= link_to "Edit this user", edit_user_path(@user) %> |
+  <%= link_to "Back to users", users_path %> | 
+  <%= link_to 'Destroy this user', @user, data: { turbo_method: :delete } %>
+</div>

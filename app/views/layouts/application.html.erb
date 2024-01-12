@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BookMart</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <%= favicon_link_tag 'favicon/favicon.png' %>
+
+    <!--icon css-->
+    <%= stylesheet_link_tag "font-awesome" %>
+    <%= stylesheet_link_tag "themify" %>
+
+    <!--Slick slider css-->
+    <%= stylesheet_link_tag "slick" %>
+    <%= stylesheet_link_tag "slick-theme" %>
+
+    <!--Animate css-->
+    <%= stylesheet_link_tag "animate" %>
+
+    <!-- Bootstrap css -->
+    <%= stylesheet_link_tag "bootstrap" %>
+
+    <!-- Theme css -->
+    <%= stylesheet_link_tag "color2" %>
+
+  </head>
+
+  <body class="b-g-light" >
+    <%= render 'shared/alert' %>
+    <%= render 'shared/header' %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
+  </body>
+</html>

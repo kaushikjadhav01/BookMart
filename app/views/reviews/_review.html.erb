@@ -1,0 +1,19 @@
+<div id="<%= dom_id review %>">
+  <tr>
+      <th scope="row"><%= review.id %></th>
+      <td><%= review.user.name %></td>
+      <td><%= review.book.name %></td>
+      <td><%= review.rating %></td>
+      <td><%= review.review %></td>
+      
+      <td>
+      <%if review.user.id == current_user.id || current_user.is_admin %>
+      <%= link_to "Edit", edit_review_path(review) %> |
+      <%= link_to 'Destroy', review, data: { turbo_method: :delete } %> | 
+      <%= link_to "Show", review %>
+      <%end%>
+      </td>
+      
+    </tr>
+
+</div>

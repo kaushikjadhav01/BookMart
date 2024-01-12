@@ -1,0 +1,17 @@
+<div id="<%= dom_id book %>">
+  <tr>
+      <th scope="row"><%= book.id %></th>
+      <td><%= book.name %></td>
+      <td><%= book.author %></td>
+      <td><%= book.publisher %></td>
+      <td><%= book.price %></td>
+      <td><%= book.stock %></td>
+      <td><%= book.average_rating %></td>
+      <td>
+        <%= link_to "Edit", edit_book_path(book) %> |
+        <%= link_to 'Destroy', book, data: { turbo_method: :delete } %> | 
+        <%= link_to "Show", book %>
+      </td>
+    </tr>
+
+</div>

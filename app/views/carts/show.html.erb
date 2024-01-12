@@ -1,0 +1,68 @@
+<!--section start-->
+<section class="login-page section-big-py-space b-g-light">
+    <div class="custom-container">
+        <div class="row">
+            <div id="cart-item" class="col-sm">
+                <%= render 'carts_item'%>
+            </div>
+            <div class="col-lg-4 offset-lg-4">
+                <div class="theme-card">
+                    <h3 class="text-center">Checkout</h3>
+                        <div class="col-lg">
+                            <%= form_for @transaction, remote: true  do |f|%>
+
+                                <div class="form-group">
+                                <strong>Name</strong>
+                                    <%= current_user.username %><br />
+                                </div>
+
+                                <div class="form-group">
+                                    <strong>Userame</strong>
+                                    <%= current_user.name %><br />
+                                </div>
+
+                                <div class="form-group">
+                                    <strong>Email Address</strong>
+                                    <%= current_user.email %><br />
+                                </div>
+
+                                <div class="form-group">
+                                    <strong>Address</strong>
+                                    <%= f.text_field :address, value: current_user.address, class: 'form-control', :required => true  %>
+                                </div>
+
+                                <div class="form-group">
+                                    <strong>Credit Card Number</strong>
+                                    <%= f.text_field :credit_card_number, value: current_user.credit_card_number, class: 'form-control', :required => true  %>
+                                </div>
+
+                                <div class="form-group">
+                                    <strong>Phone Number</strong>
+                                    <%= f.text_field :phone_number, value: current_user.phone_number, class: 'form-control', :required => true  %>
+                                </div>
+
+                                <div class="form-group">
+                                    <strong>Number of Items</strong>
+                                    <%= @transaction.quantity %>
+                                </div>
+
+                                <div class="form-group">
+                                    <strong>Books</strong>
+                                    <%= @transaction.purchased_books %>
+                                </div>
+
+                                <div class="form-group">
+                                    <strong>Total Price</strong>
+                                    <%= @transaction.total_price %>
+                                </div>
+
+                                <div class="form-group">
+                                    <%= f.submit "Submit", class: 'btn btn-normal' %>
+                                </div>
+                            <% end %>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>

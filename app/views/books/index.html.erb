@@ -1,0 +1,45 @@
+<section class="contact-page register-page b-g-light">
+<div class="custom-container">
+<div class="row">
+    <div class="col-lg-10">
+      <h3 class="mb-3" style="padding-top:15px;">BOOKS</h3>
+    </div>
+    <div class="col">
+      <%= link_to "New book", new_book_path, class: 'btn btn-solid btn-sm mt-3 mb-3'  %>
+    </div>
+</div>
+
+
+<%= form_tag "/books", method: "GET" do %>
+  <%= label_tag :author %>
+  <%= text_field_tag :author, params[:author] %>
+
+  <%= submit_tag "Search" %>
+
+<% end %>
+
+
+</div>
+</section>
+
+<div id="books">
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Publisher</th>
+        <th scope="col">Price</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Average Rating</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @books.each do |book| %>
+          <%= render book %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
