@@ -29,7 +29,7 @@ Online Book Shopping System class project using Ruby on Rails, live at: http://b
   </ol>
 </details>
 <p align="center">
-    <a href="https://github.com/kaushikjadhav01/BookMart">View Demo</a>
+    <a href="http://bookmart.kajadhav.me">View Demo</a>
     ·
     <a href="https://github.com/kaushikjadhav01/BookMart/issues">Report Bug</a>
     ·
