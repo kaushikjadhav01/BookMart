@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/742607049.svg)](https://zenodo.org/doi/doi/10.5281/zenodo.10498988)
+[![DOI](https://zenodo.org/badge/742607049.svg)](https://zenodo.org/doi/10.5281/zenodo.10498988)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/kaushikjadhav01/BookMart/blob/main/LICENSE)
 [![Code Coverage](https://codecov.io/gh/NCSU-Fall-2022-SE-Project-Team-11/XpensAuditor---Group-11/branch/main/graphs/badge.svg)](https://codecov.io)
 ![GitHub contributors](https://img.shields.io/badge/Contributors-1-brightgreen)
