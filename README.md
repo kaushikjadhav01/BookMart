@@ -32,7 +32,7 @@ Online Book Shopping System class project using Ruby on Rails, live at: http://b
 ## System Description and Functions
 **Live Demo:** http://bookmart.kajadhav.me<br/>
 **Demo Video:** <br/>
-[<img src="https://i.ytimg.com/vi/wCl_MHH4gtA/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=wCl_MHH4gtA "CSC 517 RoR BookMart")<br/>
+[<img src="https://i.ytimg.com/vi/wCl_MHH4gtA/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=2Mb_8P3t-xY "CSC 517 RoR BookMart")<br/>
 
 **Admin Creds:** <br/>
 Username: admin <br/>
