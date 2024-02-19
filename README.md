@@ -96,7 +96,7 @@ After running local setup steps, run ```rspec --format doc``` to run tests for t
 <li>Github: https://github.com/kaushikjadhav01</li>
 <li>Medium: https://medium.com/@kaushikjadhav01</li>
 <li>LinkedIn: https://www.linkedin.com/in/kaushikjadhav01/</li>
-<li>Portfolio: http://kajadhav.me/</li>
+<li>Portfolio: https://kajadhav.me/</li>
 <li>Linked In: https://www.linkedin.com/in/kajadhav/
 <li>Dev.to: https://dev.to/kaushikjadhav01
 <li>Codesignal: https://app.codesignal.com/profile/kaushik_j_vtc
